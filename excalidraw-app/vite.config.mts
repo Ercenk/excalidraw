@@ -160,6 +160,8 @@ export default defineConfig(({ mode }) => {
             // loading. So we exclude it by name instead.
             "**/CodeMirrorEditor-*.js",
           ],
+          // Increase the file size limit for precaching (default is 2MB)
+          maximumFileSizeToCacheInBytes: 3 * 1024 * 1024, // 3MB
           runtimeCaching: [
             {
               urlPattern: new RegExp(".+.woff2"),
